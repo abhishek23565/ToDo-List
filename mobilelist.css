@@ -15,10 +15,6 @@
         margin-right: 10vw;
     }
     
-    /* #btn2{
-    
-    } */
-    
     .btn{
         height: 2.8rem;
         width: 35vw;
@@ -68,7 +64,28 @@
         cursor: pointer;
         width: 5vw;
         height: 4vh;
-        /* float: right; */
+    }
+
+    .editbtn{
+        color: white;
+        background-color: rgb(84, 127, 245);
+        border: none;
+        font-size: 1rem;
+        cursor: pointer;
+        width: 5vw;
+        height: 4vh;
+    }
+
+    .savebtn{
+        height: 2.8rem;
+        width: 35vw;
+        border: none;
+        font-size: 0.9rem;
+        border-radius: 2rem;
+        font-family: 'Ubuntu', sans-serif;
+        background: #3fb22a;
+        color: white;
+        margin-left: 5vw;
     }
 
     .completed{
@@ -76,7 +93,7 @@
         background-color: rgb(69, 218, 69);
     }
     
-    .down{
+    .slide{
         opacity: 0;
         transform: translateX(15rem);
         transition: all 0.5s ease-in-out;
@@ -96,13 +113,11 @@
         font-family: 'Ubuntu', sans-serif;
     }
 
+    
+
     #btn1{
         margin-right: 10vw;
     }
-    
-    /* #btn2{
-    
-    } */
     
     .btn{
         height: 2.8rem;
@@ -153,7 +168,28 @@
         cursor: pointer;
         width: 5vw;
         height: 4vh;
-        /* float: right; */
+    }
+
+    .editbtn{
+        color: white;
+        background-color: rgb(84, 127, 245);
+        border: none;
+        font-size: 1rem;
+        cursor: pointer;
+        width: 5vw;
+        height: 4vh;
+    }
+
+    .savebtn{
+        height: 2.8rem;
+        width: 20vw;
+        border: none;
+        font-size: 0.9rem;
+        border-radius: 2rem;
+        font-family: 'Ubuntu', sans-serif;
+        background: #3fb22a;
+        color: white;
+        margin-left: 5vw;
     }
 
     .completed{
@@ -161,7 +197,7 @@
         background-color: rgb(69, 218, 69);
     }
     
-    .down{
+    .slide{
         opacity: 0;
         transform: translateX(15rem);
         transition: all 0.5s ease-in-out;

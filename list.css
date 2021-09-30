@@ -52,11 +52,8 @@ body{
     margin-right: 2vw;
 }
 
-/* #btn2{
-
-} */
-
 .btn{
+    cursor: pointer;
     height: 2.8rem;
     width: 9vw;
     border: none;
@@ -105,7 +102,29 @@ body{
     cursor: pointer;
     width: 2vw;
     height: 4vh;
-    /* float: right; */
+}
+
+.editbtn{
+    color: white;
+    background-color: rgb(84, 127, 245);
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 2vw;
+    height: 4vh;
+}
+
+.savebtn{
+    cursor: pointer;
+    height: 2.8rem;
+    width: 9vw;
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 2rem;
+    font-family: 'Ubuntu', sans-serif;
+    background: #3fb22a;
+    color: white;
+    margin-left: 5.5vw;
 }
 
 .completed{
@@ -113,8 +132,22 @@ body{
     background-color: rgb(69, 218, 69);
 }
 
-.down{
+.slide{
     opacity: 0;
     transform: translateX(15rem);
     transition: all 0.5s ease-in-out;
+}
+
+.edit-input{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50vw;
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 3rem;
+    background-color: white;
+    font-family: 'Ubuntu', sans-serif;
 }

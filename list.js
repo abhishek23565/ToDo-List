@@ -4,6 +4,7 @@ let inputTag = document.querySelector('#inputTag');
 let list = document.querySelector('#list');
 let addTop = document.querySelector('#btn1');
 let addBottom = document.querySelector('#btn2');
+let container2 = document.querySelector('#container2');
 
 // code for add item bottom button
 addBottom.addEventListener('click', function (event) {
@@ -24,6 +25,12 @@ addBottom.addEventListener('click', function (event) {
         todoList.classList.add('todo-list');
         todoDiv.appendChild(todoList);
 
+        // create edit button
+        let editButton = document.createElement('button');
+        editButton.innerText = "✎";
+        editButton.classList.add('editbtn');
+        todoDiv.appendChild(editButton);
+
         // create check button
         let checkButton = document.createElement('button');
         checkButton.innerText = "✔";
@@ -38,6 +45,7 @@ addBottom.addEventListener('click', function (event) {
 
         // adding div to list
         list.appendChild(todoDiv);
+
 
         inputTag.value = "";
         document.getElementById('error').style.display = "none";
@@ -57,6 +65,9 @@ addTop.addEventListener('click', function (event) {
     }
 
     else {
+        // let todoButton = document.createElement('button');
+        // todoButton.classList.add('todo-button');
+
         // create div element
         let todoDiv = document.createElement('div');
         todoDiv.classList.add('todo-div');
@@ -66,6 +77,12 @@ addTop.addEventListener('click', function (event) {
         todoList.innerText = inputTag.value;
         todoList.classList.add('todo-list');
         todoDiv.appendChild(todoList);
+
+        // create edit button
+        let editButton = document.createElement('button');
+        editButton.innerText = "✎";
+        editButton.classList.add('editbtn');
+        todoDiv.appendChild(editButton);
 
         // create check button
         let checkButton = document.createElement('button');
@@ -89,6 +106,7 @@ addTop.addEventListener('click', function (event) {
             list.insertBefore(todoDiv, pos);
         }
 
+
         inputTag.value = "";
         document.getElementById('error').style.display = "none";
     }
@@ -104,7 +122,7 @@ list.addEventListener('click', function (event) {
     let item = event.target;
     if (item.classList[0] === "trashbtn") {
         let todel = item.parentElement;
-        todel.classList.add('down');
+        todel.classList.add('slide');
         todel.addEventListener('transitionend', function () {
             todel.remove()
         });
@@ -113,5 +131,26 @@ list.addEventListener('click', function (event) {
     if (item.classList[0] === "checkbtn") {
         let todel = item.parentElement;
         todel.classList.toggle('completed');
+    }
+
+    if (item.classList[0] === "editbtn") {
+        addBottom.style.display = 'none';
+        addTop.style.display = 'none';
+        let todel = item.parentElement;
+        let rep = todel.firstElementChild;
+        inputTag.value = rep.innerText;
+        rep.innerText = "";
+        let newElement = document.createElement('button');
+        newElement.innerText = "Save";
+        newElement.classList.add('savebtn');
+        container2.appendChild(newElement);
+        newElement.addEventListener("click", function (e) {
+            e.preventDefault();
+            rep.innerText = inputTag.value;
+            inputTag.value = "";
+            newElement.style.display = 'none';
+            addBottom.style.display = 'inline-block';
+            addTop.style.display = 'inline-block';
+        })
     }
 });
