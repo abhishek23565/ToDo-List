@@ -58,7 +58,8 @@ body{
     width: 9vw;
     border: none;
     font-size: 0.9rem;
-    background: rgb(126, 180, 64);
+    background: rgba(57, 188, 248, 0.842);
+    color: white;
     border-radius: 2rem;
     font-family: 'Ubuntu', sans-serif;
 }
@@ -124,6 +125,19 @@ body{
     font-family: 'Ubuntu', sans-serif;
     background: #3fb22a;
     color: white;
+    margin-left: 5.5vw;
+}
+
+.okbtn{
+    cursor: pointer;
+    height: 2.8rem;
+    width: 9vw;
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 2rem;
+    font-family: 'Ubuntu', sans-serif;
+    background: #adafad;
+    color: rgb(100, 98, 98);
     margin-left: 5.5vw;
 }
 

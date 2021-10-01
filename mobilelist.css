@@ -13,15 +13,17 @@
 
     #btn1{
         margin-right: 10vw;
+        
     }
-    
+
     .btn{
         height: 2.8rem;
         width: 35vw;
         border: none;
         font-size: 0.9rem;
-        background: rgb(126, 180, 64);
+        background: rgba(57, 188, 248, 0.842);
         border-radius: 2rem;
+        color: white;
         font-family: 'Ubuntu', sans-serif;
     }
 
@@ -80,12 +82,25 @@
         height: 2.8rem;
         width: 35vw;
         border: none;
-        font-size: 0.9rem;
+        font-size: 1.5rem;
         border-radius: 2rem;
         font-family: 'Ubuntu', sans-serif;
         background: #3fb22a;
         color: white;
-        margin-left: 5vw;
+        margin-left: 22.5vw;
+    }
+
+    .okbtn{
+        cursor: pointer;
+        height: 2.8rem;
+        width: 20vw;
+        border: none;
+        font-size: 1.5rem;
+        border-radius: 2rem;
+        font-family: 'Ubuntu', sans-serif;
+        background: #adafad;
+        color: rgb(100, 98, 98);
+        margin-left: 30vw;
     }
 
     .completed{
@@ -124,7 +139,8 @@
         width: 20vw;
         border: none;
         font-size: 0.9rem;
-        background: rgb(126, 180, 64);
+        background: rgba(57, 188, 248, 0.842);
+        color: white;
         border-radius: 2rem;
         font-family: 'Ubuntu', sans-serif;
     }
@@ -184,12 +200,25 @@
         height: 2.8rem;
         width: 20vw;
         border: none;
-        font-size: 0.9rem;
+        font-size: 1.5rem;
         border-radius: 2rem;
         font-family: 'Ubuntu', sans-serif;
         background: #3fb22a;
         color: white;
-        margin-left: 5vw;
+        margin-left: 15vw;
+    }
+
+    .okbtn{
+        cursor: pointer;
+        height: 2.8rem;
+        width: 10vw;
+        border: none;
+        font-size: 1.5rem;
+        border-radius: 2rem;
+        font-family: 'Ubuntu', sans-serif;
+        background: #adafad;
+        color: rgb(100, 98, 98);
+        margin-left: 20vw;
     }
 
     .completed{

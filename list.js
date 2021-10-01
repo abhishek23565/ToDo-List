@@ -6,12 +6,27 @@ let addTop = document.querySelector('#btn1');
 let addBottom = document.querySelector('#btn2');
 let container2 = document.querySelector('#container2');
 
+
+
 // code for add item bottom button
 addBottom.addEventListener('click', function (event) {
     event.preventDefault();
     // let fchild = list.firstElementChild.value;
     if (inputTag.value == "") {
         document.getElementById('error').style.display = "block";
+        addBottom.style.display = 'none';
+        addTop.style.display = 'none';
+        let okbtn = document.createElement('button');
+        okbtn.classList.add("okbtn");
+        okbtn.innerText = "Ok";
+        okbtn.style.display = "block";
+        container2.replaceChild(okbtn, addTop);
+        okbtn.addEventListener("click", function () {
+            document.getElementById('error').style.display = "none";
+            container2.replaceChild(addTop, okbtn);
+            addBottom.style.display = 'inline-block';
+            addTop.style.display = 'inline-block';
+        })
     }
 
     else {
@@ -62,11 +77,22 @@ addTop.addEventListener('click', function (event) {
     // let fchild = list.firstElementChild.value;
     if (inputTag.value == "") {
         document.getElementById('error').style.display = "block";
+        addBottom.style.display = 'none';
+        addTop.style.display = 'none';
+        let okbtn = document.createElement('button');
+        okbtn.classList.add("okbtn");
+        okbtn.innerText = "Ok";
+        okbtn.style.display = "block";
+        container2.replaceChild(okbtn, addTop);
+        okbtn.addEventListener("click", function () {
+            document.getElementById('error').style.display = "none";
+            container2.replaceChild(addTop, okbtn);
+            addBottom.style.display = 'inline-block';
+            addTop.style.display = 'inline-block';
+        })
     }
 
     else {
-        // let todoButton = document.createElement('button');
-        // todoButton.classList.add('todo-button');
 
         // create div element
         let todoDiv = document.createElement('div');
@@ -139,18 +165,21 @@ list.addEventListener('click', function (event) {
         let todel = item.parentElement;
         let rep = todel.firstElementChild;
         inputTag.value = rep.innerText;
-        rep.innerText = "";
-        let newElement = document.createElement('button');
-        newElement.innerText = "Save";
-        newElement.classList.add('savebtn');
-        container2.appendChild(newElement);
-        newElement.addEventListener("click", function (e) {
+        let save = document.createElement('button');
+        save.classList.add('savebtn');
+        save.innerText = "Save";
+        save.style.display = 'block';
+        container2.replaceChild(save, addTop);
+        save.addEventListener("click", function (e) {
             e.preventDefault();
             rep.innerText = inputTag.value;
             inputTag.value = "";
-            newElement.style.display = 'none';
+            container2.replaceChild(addTop, save);
+            save.style.display = 'none';
+            item.style.display = "inline-block";
             addBottom.style.display = 'inline-block';
             addTop.style.display = 'inline-block';
+
         })
     }
 });
