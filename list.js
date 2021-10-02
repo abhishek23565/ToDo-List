@@ -170,6 +170,7 @@ list.addEventListener('click', function (event) {
         save.innerText = "Save";
         save.style.display = 'block';
         container2.replaceChild(save, addTop);
+        inputTag.focus();
         save.addEventListener("click", function (e) {
             e.preventDefault();
             rep.innerText = inputTag.value;
